@@ -2,3 +2,6 @@ text          := header* paragraph* (text | NIL)
 header        := same_indent INDENT indented_text
 indented_text := [^\n]+ (NL same_indent indented_text | NIL)
 paragraph     := NL NL+ CH+
+ul            := INDENT [-*] SPC SPC* item_text (NL ul | NIL)
+item_text     := [^\n]+ (NL same_indent SPC* item_text | NIL)
+ol            := INDENT ENUM [). ] SPC+ item_text (NL ol | NIL)

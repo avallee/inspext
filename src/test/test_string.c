@@ -17,7 +17,7 @@
  * this program.  If not, see <http://www.gnu.org/licenses/>.
  *****************************************************************************/
 
-#include "../string.h"
+#include "../istring.h"
 #include "cu.h"
 #include <string.h>
 #include <ctype.h>
